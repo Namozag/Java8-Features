@@ -7,6 +7,7 @@ package java8.features.lambda;
 
 import java.util.Arrays;
 import java.util.List;
+import javax.swing.JButton;
 
 /**
  *
@@ -37,6 +38,9 @@ public class LambdaTest {
         // Set implementation to a single method interface
         Runnable r = () -> System.out.println("RUNNING ....");
         r.run();
+        
+        JButton button = new JButton("OK");
+        button.addActionListener( x -> System.out.println("Button clicked at " + x.getWhen()) );
         
         
     }
